@@ -11,7 +11,6 @@ A threat actor may send a malicious redirection request for a vulnerable target 
 ## Code
 #### Target-Logic 
 ```js
-...
 app.post("/weclome", (request, response) => {
     if (request.redirect){
         res.redirect(req.query.redirect);
@@ -19,7 +18,6 @@ app.post("/weclome", (request, response) => {
         res.redirect("/")
     }
 });
-...
 ```
 
 #### Target-In
