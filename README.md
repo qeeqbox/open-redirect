@@ -21,6 +21,24 @@ The redirect request was sent back to qeeqbox.com from the webapp. The client ma
 A threat actor could send a malicious link, such as http://127.0.0.1:5142/redirect?url=http%3A%2F%2Fmalicious.xyz123, using social engineering attacks. If the victim falls for it, they will be redirected to the malicious website. If the victim clicks on update Firefox, they will install a malicious file
 <p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/open-redirect/main/content/5.png"></p>
 
+## Code
+When a client sends a GET request to the redirect route with url paramter, the url is passed to a redirect function
+```py
+def do_GET(self):
+    ....
+    elif parsed_url.path == "/redirect":
+        self.redirect(get_request_data["url"][0])
+        return
+    ....
+```
+There redirect function in the backend that takes a URL parameter. This function sends the 301 HTTP response code along with the URL to redirect to
+```py
+def redirect(self, URL):
+    self.send_response(301)
+    self.send_header('Location', URL)
+    self.end_headers()
+```
+
 ## Impact
 Medium
 
