@@ -1,4 +1,4 @@
-<p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/open-redirect/main/open-redirect.png"></p>
+<p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/open-redirect/main/content/open-redirect.svg"></p>
 
 A threat actor may send a malicious redirection request for a vulnerable target to a victim; the victim gets redirected to a malicious website that downloads an executable file
 
