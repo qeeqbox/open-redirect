@@ -22,7 +22,7 @@ A threat actor could send a malicious link, such as http://127.0.0.1:5142/redire
 <p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/open-redirect/main/content/5.png"></p>
 
 ## Code
-When a client sends a GET request to the redirect route with url paramter, the url is passed to a redirect function
+When a client sends a GET request to the redirect route with a URL parameter, the URL is passed to the redirect() function
 ```py
 def do_GET(self):
     ....
@@ -31,11 +31,11 @@ def do_GET(self):
         return
     ....
 ```
-There redirect function in the backend that takes a URL parameter. This function sends the 301 HTTP response code along with the URL to redirect to
+There redirect() function in the backend that takes a URL parameter. This function sends the 301 HTTP response code along with the URL to redirect to
 ```py
-def redirect(self, URL):
+def redirect(self, url):
     self.send_response(301)
-    self.send_header('Location', URL)
+    self.send_header('Location', url)
     self.end_headers()
 ```
 
