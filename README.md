@@ -32,7 +32,8 @@ Medium
 - Malware Distribution
 
 ## Redemption
-- Input validation
+- Validate and Sanitize Input
+- Whitelist redirected URLs
 
 ## Require
 - Social Engineering
