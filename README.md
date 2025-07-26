@@ -4,7 +4,7 @@ An application allows a user to control redirection to another URL. A threat act
 
 Clone this current repo recursively
 ```sh
-git clone --recursive https://github.com/qeeqbox/open-redirect
+git clone --recurse-submodules https://github.com/qeeqbox/open-redirect
 ```
 Run the webapp using Python
 ```sh
