@@ -39,22 +39,3 @@ def redirect(self, url):
     self.end_headers()
 ```
 
-## Impact
-Medium
-
-## Names
-- Open Redirect
-
-## Risk
-- Social Engineering
-- Malware Distribution
-
-## Redemption
-- Validate and Sanitize Input
-- Whitelist redirected URLs
-
-## Require
-- Social Engineering
-
-## ID
-cea84b63-1552-47ad-a160-503f1c913390
